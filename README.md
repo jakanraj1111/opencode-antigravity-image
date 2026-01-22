@@ -53,6 +53,14 @@ Then add to `~/.config/opencode/opencode.json`:
 
 ### Basic Image Generation
 
+- Via `generate-image` command
+```
+\generate-image A cyberpunk cat in neon-lit Tokyo streets, file name should be cyberpunk-cat save it at ~/Pictures
+```
+
+
+- Using tool format:
+
 ```
 generate_image({ prompt: "A cyberpunk cat in neon-lit Tokyo streets" })
 ```
@@ -152,7 +160,7 @@ The tool returns markdown with:
 
 ## Sessions
 
-Sessions are stored in `.opencode/flash-image-sessions/` within your project directory. Each session maintains conversation history for character consistency.
+Sessions are stored in `.opencode/generated-image-sessions/` within your project directory. Each session maintains conversation history for character consistency.
 
 ## License
 

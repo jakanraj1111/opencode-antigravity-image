@@ -3,7 +3,7 @@ node_modules/
 
 # Generated files
 .opencode/generated-images/
-.opencode/flash-image-sessions/
+.opencode/generated-image-sessions/
 
 # Environment
 .env

@@ -52,7 +52,7 @@ export const DEFAULT_ASPECT_RATIO: AspectRatio = "1:1";
 export const DEFAULT_OUTPUT_DIR = ".opencode/generated-images";
 
 // Sessions directory (relative to project root)
-export const SESSIONS_SUBDIR = ".opencode/flash-image-sessions";
+export const SESSIONS_SUBDIR = ".opencode/generated-image-sessions";
 
 // Rate limit key for tracking in accounts file
 export const RATE_LIMIT_KEY_PREFIX = "gemini-antigravity";
@@ -60,7 +60,7 @@ export const RATE_LIMIT_KEY_PREFIX = "gemini-antigravity";
 // Command file for OpenCode discovery
 const commandBase = path.join(os.homedir(), ".config", "opencode");
 export const COMMAND_DIR = path.join(commandBase, "command");
-export const COMMAND_FILE = path.join(COMMAND_DIR, "flash-image.md");
+export const COMMAND_FILE = path.join(COMMAND_DIR, "generate-image.md");
 export const COMMAND_CONTENT = `---
 description: Generate images using Gemini 3 Pro Image model
 ---
