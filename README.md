@@ -19,6 +19,9 @@ This plugin requires `opencode-antigravity-auth` to be installed and configured 
 
 ## Installation
 
+<details open>
+<summary><b>For Humans</b></summary>
+
 ### Option 1: Add to OpenCode config (Recommended)
 
 Add to your `~/.config/opencode/opencode.json`:
@@ -48,6 +51,36 @@ Then add to `~/.config/opencode/opencode.json`:
   ]
 }
 ```
+
+</details>
+
+<details>
+<summary><b>For LLM Agents</b></summary>
+
+### Step-by-Step Instructions
+
+1. **Check Prerequisites**: Ensure `opencode-antigravity-auth` is installed in `~/.config/opencode/opencode.json`.
+
+2. **Install Plugin**: Add `opencode-antigravity-image` to the `plugin` array in `~/.config/opencode/opencode.json`.
+
+   ```json
+   {
+     "plugin": [
+       "opencode-antigravity-auth",
+       "opencode-antigravity-image"
+     ]
+   }
+   ```
+
+### Verification
+
+Ask the user to generate an image to verify the installation:
+
+```bash
+\generate-image A cyberpunk cat
+```
+
+</details>
 
 ## Usage
 
