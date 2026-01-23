@@ -3,7 +3,7 @@ name: Publish to npm
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 jobs:
   publish:
@@ -28,6 +28,6 @@ jobs:
           ANTIGRAVITY_REFRESH_TOKEN: ${{ secrets.ANTIGRAVITY_REFRESH_TOKEN }}
 
       - name: Publish to npm
-        run: bun publish --provenance --access public
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set registry https://registry.npmjs.org/
+          npm publish --provenance --access public
