@@ -28,4 +28,4 @@ jobs:
           ANTIGRAVITY_REFRESH_TOKEN: ${{ secrets.ANTIGRAVITY_REFRESH_TOKEN }}
 
       - name: Publish to npm
-        run: npm publish --provenance --access public
+        run: bun publish --provenance --access public
