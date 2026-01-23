@@ -1,9 +1,8 @@
 # Dependencies
 node_modules/
 
-# Generated files
-.opencode/generated-images/
-.opencode/generated-image-sessions/
+# Exclude opencode files
+.opencode
 
 # Environment
 .env
@@ -33,3 +32,6 @@ build/
 
 # Test coverage
 coverage/
+
+# Exclude Test Outputs
+.test-output
